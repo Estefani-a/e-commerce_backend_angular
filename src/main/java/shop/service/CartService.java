@@ -34,7 +34,7 @@ public class CartService {
             return cartRepository.findById(id);
     }
         
-    // Servicio para calcular total y descuentos
+    //Servicio para calcular total y descuentos
     public Map<String, Object> getCartWithTotals(int id) {
         Optional<Cart> optionalCart = findById(id);
 

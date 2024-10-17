@@ -22,19 +22,20 @@ import shop.util.Enums.CartState;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
+//Falta agregar un @RequestMapping("/cart") para no repetir
 public class CartController {
 
 	@Autowired
 	CartService cartService;
 
-	@GetMapping("/cart/get")
+	@GetMapping("/cart/get") //Trae todos los carritos
 	public Iterable<Cart> getAll() {
 		return cartService.findAll();
 	}
 
-	@GetMapping("/cart/get/{id}")
+	@GetMapping("/cart/get/{id}") //Trae 1 carrito por ID
         public ResponseEntity<?> findById(@PathVariable int id) {
-        Map<String, Object> cartDetails = cartService.getCartWithTotals(id);
+        Map<String, Object> cartDetails = cartService.getCartWithTotals(id); //llama a cartService para descuentos
             if (cartDetails != null) {
             return new ResponseEntity<>(cartDetails, HttpStatus.OK);
             } else {

@@ -26,7 +26,7 @@ public class ShopApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // creo y guardar productos
+        // creo y guardar productos de test que se guardan en la BD
         Product prod1 = createAndSaveProduct("Webcam", 15000f);
         Product prod2 = createAndSaveProduct("Smartphone", 20000f);
         Product prod3 = createAndSaveProduct("Kindle", 10000f);

@@ -23,8 +23,9 @@ import shop.service.ProductService;
 import shop.util.Enums.CartState;
 import shop.util.FormCartProduct;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200") //cambiado de 5173 de react
 @RestController
+//Falta agregar un @RequestMapping("/detail") para no repetir
 public class DetailController {
 
     @Autowired
@@ -32,7 +33,7 @@ public class DetailController {
     @Autowired
     ProductService productService;
 
-    @GetMapping("/detail/{id}")
+    @GetMapping("/detail/{id}") //Cargar por id
     public Set<Product> findById(@PathVariable int id) {
             Optional<Cart> optionalCart = cartService.findById(id);
             if (optionalCart.isPresent()) {
@@ -41,7 +42,7 @@ public class DetailController {
                     return new HashSet<Product>();
     }
 
-    @PostMapping("/detail/add")
+    @PostMapping("/detail/add") //agregar productos al carrito
     public ResponseEntity<?> add(@RequestBody FormCartProduct form) {
             Optional<Cart> optionalCart = cartService.findById(form.getCartId());
             if (optionalCart.isPresent()) {
@@ -57,7 +58,7 @@ public class DetailController {
             return new ResponseEntity<String>("No se pudo agregar detalle", HttpStatus.BAD_REQUEST);
     }
         
-    @DeleteMapping("/detail/remove")
+    @DeleteMapping("/detail/remove") //borrar productos
     public ResponseEntity<?> removeProductFromCart(@RequestBody FormCartProduct form) {
     Optional<Cart> optionalCart = cartService.findById(form.getCartId());
     if (optionalCart.isPresent()) {
@@ -81,7 +82,7 @@ public class DetailController {
     }
 
 
-    @PostMapping("/buy")
+    @PostMapping("/buy") //No anda
     public ResponseEntity<?> buy(@RequestBody FormCartProduct form) {
     Optional<Cart> optionalCart = cartService.findById(form.getCartId());
         if (optionalCart.isPresent()) {

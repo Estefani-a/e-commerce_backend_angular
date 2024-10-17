@@ -12,11 +12,11 @@ import shop.service.ProductService;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/products") //da el contexto a los endpoints
 public class ProductController {
 
     @Autowired
-    private ProductService productService;
+    private ProductService productService; //llsma a productService
 
     //traigo todos los productos
     @GetMapping("/get")
