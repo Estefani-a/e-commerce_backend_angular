@@ -1,6 +1,6 @@
 <h1  align="center"> E-Commerce Challenge - Backend </h1>
 
-<div align="center"> Backend de la aplicación que permite realizar ventas online y implementa un carrito de compras utilizando React para el frontend y Java para el backend. </div> &nbsp;
+<div align="center"> Backend de la aplicación que permite realizar ventas online y implementa un carrito de compras utilizando Angular para el frontend y Java para el backend. </div> &nbsp;
 
 <p align="center">
   <a href="https://www.oracle.com/java/">
