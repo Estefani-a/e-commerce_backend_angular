@@ -8,4 +8,4 @@ COPY target/carr-0.0.1-SNAPSHOT.jar app.jar
 #Expone el puerto de la aplicacion
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "/app/target/carr-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
