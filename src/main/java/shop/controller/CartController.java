@@ -20,7 +20,8 @@ import shop.model.Cart;
 import shop.service.CartService;
 import shop.util.Enums.CartState;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins= "https://ecommerce-angular-55932.web.app/")
 @RestController
 //Falta agregar un @RequestMapping("/cart") para no repetir
 public class CartController {
@@ -74,5 +75,5 @@ public class CartController {
 	public void delete(@PathVariable int id) {
 		cartService.delete(id);
 	}
-
+        
 }

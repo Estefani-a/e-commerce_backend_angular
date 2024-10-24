@@ -23,7 +23,8 @@ import shop.service.ProductService;
 import shop.util.Enums.CartState;
 import shop.util.FormCartProduct;
 
-@CrossOrigin(origins = "http://localhost:4200") //cambiado de 5173 de react
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins= "https://ecommerce-angular-55932.web.app/")
 @RestController
 //Falta agregar un @RequestMapping("/detail") para no repetir
 public class DetailController {

@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import shop.model.Product;
 import shop.service.ProductService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins= "https://ecommerce-angular-55932.web.app/")
 @RestController
 @RequestMapping("/products") //da el contexto a los endpoints
 public class ProductController {
