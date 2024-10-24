@@ -1,4 +1,5 @@
 #version: '2.0'  # Versión de Docker Compose 3.9
+version: '3'
 
 services:
   app:
@@ -9,3 +10,7 @@ services:
       - "8080:8080"
     volumes:
       - ./target:/app/target
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://bly4vln5shsosqjm4hrw-mysql.services.clever-cloud.com:3306/bly4vln5shsosqjm4hrw?useSSL=false&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: umdihkfc43yjpg6a
+      SPRING_DATASOURCE_PASSWORD: jCjatOzgVF41dHTIDEpk
