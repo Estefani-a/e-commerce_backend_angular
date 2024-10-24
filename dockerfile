@@ -14,6 +14,6 @@ COPY --from=build /app/target/carr-0.0.1-SNAPSHOT.jar app.jar
 
 COPY src/main/resources/application-prod.properties /app/application-prod.properties
 
-EXPOSE 8080
+EXPOSE 3000
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
