@@ -7,9 +7,10 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "8080:8080"
     volumes:
       - ./target:/app/target
+    mem_limit: 512m
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://bly4vln5shsosqjm4hrw-mysql.services.clever-cloud.com:3306/bly4vln5shsosqjm4hrw?useSSL=false&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: umdihkfc43yjpg6a
