@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import shop.model.Cart;
@@ -22,6 +23,7 @@ import shop.util.Enums.CartState;
 
 //@CrossOrigin(origins = "http://localhost:4200")
 @CrossOrigin(origins= "https://ecommerce-angular-55932.web.app/")
+@RequestMapping("/cart") // Establece el prefijo de las rutas
 @RestController
 //Falta agregar un @RequestMapping("/cart") para no repetir
 public class CartController {
